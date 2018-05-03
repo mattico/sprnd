@@ -1,0 +1,4 @@
+[package]
+name = "sprnd"
+version = "0.1.0"
+authors = ["Matt Ickstadt <mattico8@gmail.com>"]

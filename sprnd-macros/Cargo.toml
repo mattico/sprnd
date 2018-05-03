@@ -1,0 +1,12 @@
+[package]
+name = "sprnd-macros"
+version = "0.1.0"
+authors = ["Matt Ickstadt <mattico8@gmail.com>"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "0.13", features = ["full", "fold"] }
+quote = "0.5"
+proc-macro2 = { version = "0.3", features = ["nightly"] }
