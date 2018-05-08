@@ -1,4 +1,5 @@
 #![feature(proc_macro)]
+#![feature(proc_macro_non_items)]
 
 extern crate sprnd_macros;
 use sprnd_macros::kernel;
