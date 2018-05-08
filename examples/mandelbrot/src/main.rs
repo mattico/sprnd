@@ -1,8 +1,9 @@
 #![feature(proc_macro)]
 
 extern crate sprnd_macros;
-extern crate sprnd;
 use sprnd_macros::kernel;
+#[macro_use]
+extern crate sprnd;
 
 #[kernel]
 fn mandel(c_re: f32, c_im: f32, /*#[uniform]*/ count: u8) -> u8 {
@@ -34,8 +35,7 @@ fn main() {
     let image = vec![0u8; width * height];
 
     for j in 0..height {
-        let row = &image[j * width];
         // collect_into? par_iter()?
-        sprnd::dispatch(row, |x| mandel(x, j as f32, iterations));
+        dispatch!(&mut image[j * width], |x| mandel(x, j, iterations));
     }
 }

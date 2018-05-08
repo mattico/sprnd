@@ -3,4 +3,5 @@ members = [
     "sprnd",
     "sprnd-macros",
     "examples/mandelbrot",
+    "examples/simple",
 ]
